@@ -1,0 +1,3 @@
+pip install Pyro4
+pip install dill
+
