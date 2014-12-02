@@ -417,6 +417,8 @@ def worker_run(verbose=False):
 
 
 if __name__ == "__main__": 
+    Pyro4.config.SERIALIZERS_ACCEPTED = set(['pickle', 'json', 'marshal', 'serpent'])          
+    Pyro4.config.SERIALIZER = 'pickle'     
     parser = argparse.ArgumentParser()
     parser.add_argument('-p', '--processes', type=int,  help='specifies the number of workers to run')
     parser.add_argument('-s', '--separate',  help='launch workers in separate windows', action="store_true")
